@@ -408,3 +408,9 @@ handleSpherical=function(inInts,inFloats,inStrings,inBuffer)
     simVision.handleSpherical(rgb_handle, six_sensor_handles, 360, 180, depth_handle)
     return {},{},{},''
 end
+
+setGravity=function(inInts,inFloats,inStrings,inBuffer)
+    local gravity = {inFloats[1], inFloats[2], inFloats[3]}
+    sim.setArrayParameter(sim.arrayparam_gravity, gravity)
+    return {},{},{},''
+end
